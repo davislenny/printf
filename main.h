@@ -1,5 +1,5 @@
-#ifndef _PRINTF_H
-#define _PRINTF_H
+#ifndef MAIN_H
+#define MAIN_H
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -20,4 +20,4 @@ int print_s(va_list s);
 int (*find_format_func(const char *format))(va_list);
 int _printf(const char *format, ...);
 
-#endif /* _PRINTF_H */
+#endif /* MAIN_H */
