@@ -19,5 +19,6 @@ int print_c(va_list c);
 int print_s(va_list s);
 int (*find_format_func(const char *format))(va_list);
 int _printf(const char *format, ...);
+int print_d(va_list d);
 
 #endif /* MAIN_H */
