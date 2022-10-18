@@ -11,7 +11,7 @@ int (*find_format_func(const char *format))(va_list)
 		{"c", print_c},
 		{"s", print_s},
 		{"d", print_d},
-/*		{"i", print_d},*/
+		{"i", print_d},
 		{NULL, NULL}
 	};
 
