@@ -10,6 +10,8 @@ int (*find_format_func(const char *format))(va_list)
 	print_t f[] = {
 		{"c", print_c},
 		{"s", print_s},
+		{"d", print_d},
+/*		{"i", print_d},*/
 		{NULL, NULL}
 	};
 
