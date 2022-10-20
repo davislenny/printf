@@ -6,27 +6,35 @@
  */
 int print_di(va_list d)
 {
-	int n, div = 1, len = 0;
-	unsigned int m;
-
+	int i, m, n, sum, count;
+	int a[10];
+	
 	n = va_arg(d, int);
-
+	count = 0;
+	m = 1000000000;
+	a[0] = n / m;
+	for (i = 1; i < 10; i++)
+	{
+		m /= 10;
+		a[i] = (n/ m) % 10;
+	}
 	if (n < 0)
 	{
-		len += putchar('-');
-		m = n * -1;
+		putchar('-');
+		count++;
+		for (i = 0; i < 10; i++)
+			a[i] *= -1;
 	}
-	else
-		m = n;
-	while (m / div > 9)
-		div *= 10;
-	while (div != 0)
+	for (i = 0, sum = 0; i < 10; i++)
 	{
-		len += putchar(m / div + '0');
-		m %= div;
-		div /= 10;
+		sum += a[i];
+		if (sum != 0 || i == 9)
+		{
+			putchar('0' + a[i]);
+			count++;
+		}
 	}
-	return (len);
+	return (count);
 }
 /**
  * print_u - prints unsigned int (base 10)
