@@ -2,14 +2,11 @@
 /**
  * print_c - prints character
  * @c: the character
- * Return: 1
+ * Return: number of chars
  */
 int print_c(va_list c)
 {
-	char ch = (char)va_arg(c, int);
-
-	putchar(ch);
-	return (1);
+	return (putchar(va_arg(c, int)));
 }
 
 /**
@@ -24,9 +21,9 @@ int print_s(va_list s)
 
 	if (!str)
 		str = "(nul)";
-	for (count = 0; str[count]; count++)
-	{
-		putchar(str[count]);
-	}
+
+	count = 0;
+	while (str[count] != '\0')
+		count += putchar(str[count]);
 	return (count);
 }
