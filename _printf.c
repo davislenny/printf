@@ -33,7 +33,7 @@ int (*get_func(const char *format))(va_list)
 /**
  * _printf - printf-like function
  * @format: format specifier
- * Retunr: number of chars
+ * Return: number of chars
  */
 int _printf(const char *format, ...)
 {
