@@ -8,7 +8,7 @@ int print_di(va_list d)
 {
 	int i, m, n, sum, count;
 	int a[10];
-	
+
 	n = va_arg(d, int);
 	count = 0;
 	m = 1000000000;
@@ -16,7 +16,7 @@ int print_di(va_list d)
 	for (i = 1; i < 10; i++)
 	{
 		m /= 10;
-		a[i] = (n/ m) % 10;
+		a[i] = (n / m) % 10;
 	}
 	if (n < 0)
 	{
