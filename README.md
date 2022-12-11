@@ -1,5 +1,5 @@
 ## _printf()
-_printf()** - is a ALX School project. The task is to write a custom version of printf() from standard library.
+_printf() - is a ALX School project. The task is to write a custom version of printf() from standard library.
 
 
 ### Environment
